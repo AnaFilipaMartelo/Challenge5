@@ -1,6 +1,6 @@
-# CFinancial Planner for Emergencies
+# Credit Union Financial Health Analysis Tools
 
-The Financial Planner for Emergencies is a powerful tool designed to help you effectively manage your finances and plan for unforeseen circumstances. This application serves as your personal financial assistant, allowing you to visualize and evaluate your current savings to determine if you have sufficient reserves for an emergency fund. 
+This project provides a set of financial analysis tools designed to help credit union members evaluate their financial health and plan for the future. The tools include a financial planner for emergencies, allowing members to assess their monthly budgets and determine if they have enough reserves for an emergency fund. Additionally, there is a financial planner for retirement that forecasts the performance of members' retirement portfolios using historical price data and Monte Carlo simulations. The prototype application showcases these tools and empowers members to make informed financial decisions
 
 ---
 
@@ -54,11 +54,21 @@ Clone the repository and Launch Jupyter Notebook by executing the following comm
 
  ![Launch Jupyter](Images/Screenshot1.png) 
 
-In the Jupyter Notebook interface, navigate to the project directory and open the finnancial_planning_tools.ipynb file.
+In the Jupyter Notebook interface, navigate to the project directory and open the finnancial_planning_tools.ipynb file. Add your Alpaca API key and Alpaca secret key to the SAMPLE.env file. 
+
+Insert the name of the .env file in the line 9 of the second block of code 
+
+```python
+load_dotenv(".env")
+```
 
 This is a prototype application, to use it with your personal information first provide the required financial information, such as your income, expenses, and current savings. 
 
-Run each cell in the notebook sequentially to calculate the current value, in US dolars, of each cryptocurrency and entire cryptocurrency wallet. And also, to calculate the value, in US dollars, of the current amount of shares in each of the stock and bond portions of the portfolio.
+Run each cell in the notebook sequentially to calculate the current value, in US dolars, of each cryptocurrency and entire cryptocurrency wallet. And also, to calculate the value, in US dollars, of the current amount of shares in each of the stock and bond portions of the members' portfolio.
+
+The second part of the application prototype will create a Monte Carlo simulation for the next 30 years and calculate the lower and upper bounds for the expected value of the portfolio (with weights 40% bonds and 60% stocks) with a 95% confidence interval.
+
+Lastly, it will will create a Monte Carlo simulation for the next 10 years and calculate the lower and upper bounds for the expected value of the portfolio (with weights adjusted to 20% bonds and 80% stocks) with a 95% confidence interval.
 
 Read the comments and text documentation within the notebook to understand the analysis and findings.
 
